@@ -14,6 +14,7 @@ venv/
 *.avi
 *.mov
 *.mkv
+!assets/
 recording_*.mp4
 cgds_*.mp4
 sck_*.mp4
