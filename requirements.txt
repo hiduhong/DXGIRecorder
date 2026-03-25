@@ -1,0 +1,25 @@
+# macOS 屏幕录制依赖
+# 安装: pip install -r requirements.txt
+
+# ──────────────────────────────────────────────
+# 第一层 (深层): ScreenCaptureKit 推流后端
+#   等价 Windows DXGI Desktop Duplication
+#   需要 macOS 12.3+ 和屏幕录制权限
+#   数据路径: GPU → IOSurface → CMSampleBuffer → CVPixelBuffer → numpy
+# ──────────────────────────────────────────────
+pyobjc-core>=10.0
+pyobjc-framework-ScreenCaptureKit>=10.0   # SCStream / SCShareableContent
+pyobjc-framework-CoreMedia>=10.0          # CMSampleBuffer / CMTime
+pyobjc-framework-Quartz>=10.0             # CVPixelBuffer + kCVPixelFormatType (CoreVideo 绑定已内含)
+
+# ──────────────────────────────────────────────
+# 第二层 (回退): mss / CoreGraphics 截图后端
+#   等价 Windows GDI BitBlt
+# ──────────────────────────────────────────────
+mss>=9.0.1
+
+# ──────────────────────────────────────────────
+# 视频编码 & 图像处理
+# ──────────────────────────────────────────────
+opencv-python>=4.8.0
+numpy>=1.24.0
