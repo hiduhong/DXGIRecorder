@@ -29,7 +29,7 @@
 由于本项目使用的是 **CGDisplayStream** 后端，它是直接从 **GPU 帧缓冲 (FrameBuffer)** 读取经过合成的最终画面，因此这类“软件层面对隐藏”技巧对本项目无效。
 
 ### 演示视频：打破软件隐藏
-![Deep Capture Demo](assets/demo_deep_capture.mp4)
+<video src="assets/demo_deep_capture.mp4" controls="controls" width="100%"></video>
 
 ---
 
